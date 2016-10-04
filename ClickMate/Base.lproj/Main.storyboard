@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="ClickMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClickMate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRL-fw-7Md">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6PF-ba-4Ke"/>
+                                    <constraint firstAttribute="width" constant="200" id="gMG-1n-PRY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="giovanni7304@me.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-Yh-Rni">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password123" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-kP-ams">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEQ-9S-swA">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Try Me"/>
+                                <connections>
+                                    <action selector="trymeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6y-Ls-Olx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qf9-kP-ams" firstAttribute="width" secondItem="YeD-Yh-Rni" secondAttribute="width" id="KvH-9R-V6S"/>
+                            <constraint firstItem="MRL-fw-7Md" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OeT-Lc-Sg7"/>
+                            <constraint firstItem="MRL-fw-7Md" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="SfF-88-auC"/>
+                            <constraint firstItem="Qf9-kP-ams" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U7H-HH-U84"/>
+                            <constraint firstItem="qEQ-9S-swA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9r-sv-ec5"/>
+                            <constraint firstItem="YeD-Yh-Rni" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBA-RT-PEH"/>
+                            <constraint firstItem="qEQ-9S-swA" firstAttribute="top" secondItem="Qf9-kP-ams" secondAttribute="bottom" constant="33" id="fwX-8D-5Vj"/>
+                            <constraint firstItem="Qf9-kP-ams" firstAttribute="top" secondItem="YeD-Yh-Rni" secondAttribute="bottom" constant="20" id="mm2-gh-7mJ"/>
+                            <constraint firstItem="YeD-Yh-Rni" firstAttribute="top" secondItem="MRL-fw-7Md" secondAttribute="bottom" constant="40" id="qP3-du-N1Q"/>
+                            <constraint firstItem="YeD-Yh-Rni" firstAttribute="width" secondItem="MRL-fw-7Md" secondAttribute="width" id="xu2-c4-OPc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="YeD-Yh-Rni" id="YLn-PR-6Av"/>
+                        <outlet property="passwordTextField" destination="Qf9-kP-ams" id="Vy6-R1-6wU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="278" y="216"/>
         </scene>
     </scenes>
 </document>
