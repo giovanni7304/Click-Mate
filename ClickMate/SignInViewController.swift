@@ -42,10 +42,12 @@ class SignInViewController: UIViewController {
                         print("Hey we have and error:\(error)")
                     } else {
                         print("Signed in Successfully")
+                        self.performSegue(withIdentifier: "signinsegue", sender: nil)
                     }
                 })
             } else {
                 print("hey we have signed in success")
+                self.performSegue(withIdentifier: "signinsegue", sender: nil)
             }
         })
         

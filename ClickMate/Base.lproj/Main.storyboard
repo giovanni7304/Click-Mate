@@ -62,11 +62,107 @@
                     <connections>
                         <outlet property="emailTextField" destination="YeD-Yh-Rni" id="YLn-PR-6Av"/>
                         <outlet property="passwordTextField" destination="Qf9-kP-ams" id="Vy6-R1-6wU"/>
+                        <segue destination="FwG-Je-TL0" kind="presentation" identifier="signinsegue" id="zXd-eH-LN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="278" y="216"/>
+        </scene>
+        <!--Click View Controller-->
+        <scene sceneID="mFz-bF-IOq">
+            <objects>
+                <viewController id="GDH-im-G3z" customClass="ClickViewController" customModule="ClickMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cy0-F5-OTM"/>
+                        <viewControllerLayoutGuide type="bottom" id="tod-8S-2Qf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fyk-7E-oAw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ORM-1p-vWv">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="EgG-0A-VUu">
+                            <connections>
+                                <action selector="logOutTapped:" destination="GDH-im-G3z" id="Px0-id-8ef"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wsg-j7-tTU">
+                            <connections>
+                                <segue destination="NSg-fs-3pM" kind="show" id="3t8-1b-2EB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnN-Ou-zeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="209"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hTn-I2-qx8">
+            <objects>
+                <viewController id="NSg-fs-3pM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uuG-MQ-Z7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="IKd-YJ-gxA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="osN-Wi-FfM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oRb-go-Ku1">
+                                <color key="backgroundColor" red="0.83601845854922274" green="0.83601845854922274" blue="0.83601845854922274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="J5f-tA-0sA"/>
+                                    <constraint firstAttribute="height" constant="128" id="acG-7c-klS"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfP-6L-vuP">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-z8-JcH">
+                                <state key="normal" title="NEXT"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oRb-go-Ku1" firstAttribute="centerX" secondItem="osN-Wi-FfM" secondAttribute="centerX" id="11m-C9-hhw"/>
+                            <constraint firstItem="fCg-z8-JcH" firstAttribute="centerX" secondItem="osN-Wi-FfM" secondAttribute="centerX" id="7CG-SN-oBB"/>
+                            <constraint firstItem="IfP-6L-vuP" firstAttribute="centerX" secondItem="osN-Wi-FfM" secondAttribute="centerX" id="7KF-Rx-cDd"/>
+                            <constraint firstItem="IfP-6L-vuP" firstAttribute="width" secondItem="oRb-go-Ku1" secondAttribute="width" id="9eu-U5-uEJ"/>
+                            <constraint firstItem="oRb-go-Ku1" firstAttribute="top" secondItem="uuG-MQ-Z7C" secondAttribute="bottom" constant="25" id="LZK-u7-uuq"/>
+                            <constraint firstItem="fCg-z8-JcH" firstAttribute="top" secondItem="IfP-6L-vuP" secondAttribute="bottom" constant="20" id="N7S-he-OF1"/>
+                            <constraint firstItem="IfP-6L-vuP" firstAttribute="top" secondItem="oRb-go-Ku1" secondAttribute="bottom" constant="15" id="boN-ub-dDo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d2m-fo-44V">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="5Dr-WB-VdY"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLP-bA-IZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703.1999999999998" y="206.44677661169416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tbG-SS-k9z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FwG-Je-TL0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qbm-GS-JYV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GDH-im-G3z" kind="relationship" relationship="rootViewController" id="f5N-Sp-MOU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAC-iZ-kcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="209.14542728635683"/>
         </scene>
     </scenes>
 </document>

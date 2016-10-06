@@ -14,6 +14,7 @@
 		866EBD1A1DA3317B00F94F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD191DA3317B00F94F50 /* Assets.xcassets */; };
 		866EBD1D1DA3317B00F94F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD1B1DA3317B00F94F50 /* LaunchScreen.storyboard */; };
 		866EBD251DA337FA00F94F50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD241DA337FA00F94F50 /* GoogleService-Info.plist */; };
+		869565C71DA5EDCA00208D89 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869565C61DA5EDCA00208D89 /* ClickViewController.swift */; };
 		C78AD8FE24F0A09EA2A521D8 /* Pods_ClickMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCDA1219ED9A82D334AC779 /* Pods_ClickMate.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		866EBD1C1DA3317B00F94F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		866EBD1E1DA3317B00F94F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		866EBD241DA337FA00F94F50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		869565C61DA5EDCA00208D89 /* ClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
 		9BCDA1219ED9A82D334AC779 /* Pods_ClickMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69D0129640A53DB53805519 /* Pods-ClickMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClickMate/Pods-ClickMate.debug.xcconfig"; sourceTree = "<group>"; };
 		BD58B26360995E5D522A0C77 /* Pods-ClickMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickMate/Pods-ClickMate.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				866EBD0F1DA3317B00F94F50 /* AppDelegate.swift */,
 				866EBD111DA3317B00F94F50 /* SignInViewController.swift */,
+				869565C61DA5EDCA00208D89 /* ClickViewController.swift */,
 				866EBD131DA3317B00F94F50 /* Main.storyboard */,
 				866EBD191DA3317B00F94F50 /* Assets.xcassets */,
 				866EBD1B1DA3317B00F94F50 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866EBD121DA3317B00F94F50 /* SignInViewController.swift in Sources */,
+				869565C71DA5EDCA00208D89 /* ClickViewController.swift in Sources */,
 				866EBD181DA3317B00F94F50 /* ClickMate.xcdatamodeld in Sources */,
 				866EBD101DA3317B00F94F50 /* AppDelegate.swift in Sources */,
 			);
@@ -265,6 +269,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -315,6 +320,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
