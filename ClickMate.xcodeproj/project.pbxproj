@@ -46,6 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861EB3711DA742D5000DE82C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				866EBD111DA3317B00F94F50 /* SignInViewController.swift */,
+				869565C61DA5EDCA00208D89 /* ClickViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		861EB3721DA742F2000DE82C /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Methods;
+			sourceTree = "<group>";
+		};
 		866EBD031DA3317B00F94F50 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +83,9 @@
 		866EBD0E1DA3317B00F94F50 /* ClickMate */ = {
 			isa = PBXGroup;
 			children = (
+				861EB3721DA742F2000DE82C /* Methods */,
+				861EB3711DA742D5000DE82C /* ViewControllers */,
 				866EBD0F1DA3317B00F94F50 /* AppDelegate.swift */,
-				866EBD111DA3317B00F94F50 /* SignInViewController.swift */,
-				869565C61DA5EDCA00208D89 /* ClickViewController.swift */,
 				866EBD131DA3317B00F94F50 /* Main.storyboard */,
 				866EBD191DA3317B00F94F50 /* Assets.xcassets */,
 				866EBD1B1DA3317B00F94F50 /* LaunchScreen.storyboard */,
