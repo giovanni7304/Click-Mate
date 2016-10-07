@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861EB3741DA745B6000DE82C /* click.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EB3731DA745B6000DE82C /* click.swift */; };
+		861EB3761DA745BF000DE82C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EB3751DA745BF000DE82C /* User.swift */; };
+		861EB3781DA745CA000DE82C /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EB3771DA745CA000DE82C /* PictureViewController.swift */; };
+		861EB37A1DA745D4000DE82C /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EB3791DA745D4000DE82C /* SelectUserViewController.swift */; };
 		866EBD101DA3317B00F94F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866EBD0F1DA3317B00F94F50 /* AppDelegate.swift */; };
 		866EBD121DA3317B00F94F50 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866EBD111DA3317B00F94F50 /* SignInViewController.swift */; };
 		866EBD151DA3317B00F94F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD131DA3317B00F94F50 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		861EB3731DA745B6000DE82C /* click.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = click.swift; sourceTree = "<group>"; };
+		861EB3751DA745BF000DE82C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		861EB3771DA745CA000DE82C /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		861EB3791DA745D4000DE82C /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		866EBD0C1DA3317B00F94F50 /* ClickMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866EBD0F1DA3317B00F94F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		866EBD111DA3317B00F94F50 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		861EB3711DA742D5000DE82C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				861EB3791DA745D4000DE82C /* SelectUserViewController.swift */,
+				861EB3771DA745CA000DE82C /* PictureViewController.swift */,
 				866EBD111DA3317B00F94F50 /* SignInViewController.swift */,
 				869565C61DA5EDCA00208D89 /* ClickViewController.swift */,
 			);
@@ -58,6 +68,8 @@
 		861EB3721DA742F2000DE82C /* Methods */ = {
 			isa = PBXGroup;
 			children = (
+				861EB3731DA745B6000DE82C /* click.swift */,
+				861EB3751DA745BF000DE82C /* User.swift */,
 			);
 			name = Methods;
 			sourceTree = "<group>";
@@ -238,10 +250,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861EB3741DA745B6000DE82C /* click.swift in Sources */,
 				866EBD121DA3317B00F94F50 /* SignInViewController.swift in Sources */,
+				861EB3761DA745BF000DE82C /* User.swift in Sources */,
 				869565C71DA5EDCA00208D89 /* ClickViewController.swift in Sources */,
+				861EB3781DA745CA000DE82C /* PictureViewController.swift in Sources */,
 				866EBD181DA3317B00F94F50 /* ClickMate.xcdatamodeld in Sources */,
 				866EBD101DA3317B00F94F50 /* AppDelegate.swift in Sources */,
+				861EB37A1DA745D4000DE82C /* SelectUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

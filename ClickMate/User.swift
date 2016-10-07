@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class User {
+    var email = ""
+    var uid = ""
+
+    func getDict() -> [String:String]? {
+        if email != "" {
+            return ["email": email, "uid":uid ]
+    
+        } else {
+            return nil
+        }
+    }
+}

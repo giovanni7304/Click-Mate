@@ -7,29 +7,65 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
-class SelectUserViewController: UIViewController {
+class SelectUserViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var users : [User] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+            print("SnapShot: \(snapshot)")
+            
+            let user = User()
+            var tempDict = ["":""]
+            tempDict = snapshot.value as! Dictionary
+            if tempDict["email"] != nil {
+                user.email = tempDict["email"]!
+                user.uid = snapshot.key
+            } else {
+                user.email = "ERROR"
+                user.uid = "ERROR"
+            }
+            
+            self.users.append(user)
+            self.tableView.reloadData()
+            
+        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return users.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        let user = users[indexPath.row]
+        
+        cell.textLabel!.text = user.email
+        
+        return  cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let user = users[indexPath.row]
+        
+        FIRDatabase.database().reference().child("users").child(user.uid).child("click").childByAutoId().setValue("TESTING")
+        
     }
-    */
-
 }

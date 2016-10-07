@@ -1,5 +1,5 @@
 //
-//  snap.swift
+//  Click.swift
 //  ClickMate
 //
 //  Created by Terry Johnson on 10/6/16.
@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Click {
+    var imageURL = ""
+    var descrip = ""
+    var from = ""
+    
+    func getDict() -> [String:String]? {
+        if imageURL != "" {
+            return ["from": from, "imageURL":imageURL, "description": descrip ]
+        } else {
+            return nil
+        }
+    }
+}
