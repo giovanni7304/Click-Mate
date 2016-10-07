@@ -80,7 +80,18 @@
                     <view key="view" contentMode="scaleToFill" id="Fyk-7E-oAw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zF7-zF-EWQ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zF7-zF-EWQ" firstAttribute="top" secondItem="cy0-F5-OTM" secondAttribute="bottom" id="0CM-OW-F3o"/>
+                            <constraint firstItem="zF7-zF-EWQ" firstAttribute="leading" secondItem="Fyk-7E-oAw" secondAttribute="leading" id="3HQ-bU-D7F"/>
+                            <constraint firstItem="tod-8S-2Qf" firstAttribute="top" secondItem="zF7-zF-EWQ" secondAttribute="bottom" id="5wd-m9-JED"/>
+                            <constraint firstAttribute="trailing" secondItem="zF7-zF-EWQ" secondAttribute="trailing" id="Jwk-l0-jbh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ORM-1p-vWv">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="EgG-0A-VUu">
@@ -94,6 +105,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="zF7-zF-EWQ" id="Rfh-RK-QR2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnN-Ou-zeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

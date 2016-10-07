@@ -18,6 +18,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var users : [User] = []
     
+    var imageURL = ""
+    var descrip = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,7 +68,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         let user = users[indexPath.row]
         
-        FIRDatabase.database().reference().child("users").child(user.uid).child("click").childByAutoId().setValue("TESTING")
+        let click = ["from":user.email,"description":descrip,"imageURL":imageURL]
         
+        FIRDatabase.database().reference().child("users").child(user.uid).child("click").childByAutoId().setValue(click)
     }
 }
