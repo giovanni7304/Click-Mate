@@ -36,6 +36,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             var tempDict = ["":""]
             tempDict = snapshot.value as! Dictionary
             if tempDict["email"] != nil {
+                print("Found email: ")
                 user.email = tempDict["email"]!
                 user.uid = snapshot.key
             } else {
@@ -70,6 +71,9 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         
         let click = ["from":user.email,"description":descrip,"imageURL":imageURL]
         
-        FIRDatabase.database().reference().child("users").child(user.uid).child("click").childByAutoId().setValue(click)
+        FIRDatabase.database().reference().child("clicks").child(user.uid).child("click").childByAutoId().setValue(click)
+        
+        navigationController!.popToRootViewController(animated: true)
+        
     }
 }

@@ -12,6 +12,7 @@ class Click {
     var imageURL = ""
     var descrip = ""
     var from = ""
+    var uid = ""
     
     func getDict() -> [String:String]? {
         if imageURL != "" {

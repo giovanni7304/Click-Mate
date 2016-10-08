@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,7 +73,7 @@
         <!--Click View Controller-->
         <scene sceneID="mFz-bF-IOq">
             <objects>
-                <viewController id="GDH-im-G3z" customClass="ClickViewController" customModule="ClickMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GDH-im-G3z" customClass="ClickViewController" customModule="ClickMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cy0-F5-OTM"/>
                         <viewControllerLayoutGuide type="bottom" id="tod-8S-2Qf"/>
@@ -107,11 +108,55 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zF7-zF-EWQ" id="Rfh-RK-QR2"/>
+                        <segue destination="XcF-3S-fZY" kind="show" identifier="viewClicksegue" id="O1v-Tk-VFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QnN-Ou-zeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887" y="209"/>
+        </scene>
+        <!--View Click View Controller-->
+        <scene sceneID="tzp-9P-T1H">
+            <objects>
+                <viewController id="XcF-3S-fZY" customClass="ViewClickViewController" customModule="ClickMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fqK-CJ-KgL"/>
+                        <viewControllerLayoutGuide type="bottom" id="re5-vp-N9g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQk-Mg-zG2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUT-jP-Iut">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.91349579010000004" green="0.91349579010000004" blue="0.91349579010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vl5-Su-r1t">
+                                <color key="backgroundColor" red="0.86514329663212441" green="0.86514329663212441" blue="0.86514329663212441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="re5-vp-N9g" firstAttribute="top" secondItem="kUT-jP-Iut" secondAttribute="bottom" constant="20" id="0UG-7i-hji"/>
+                            <constraint firstItem="kUT-jP-Iut" firstAttribute="centerX" secondItem="gQk-Mg-zG2" secondAttribute="centerX" id="Hxk-7S-YaP"/>
+                            <constraint firstItem="kUT-jP-Iut" firstAttribute="top" secondItem="Vl5-Su-r1t" secondAttribute="bottom" constant="30" id="IVv-Ie-wcx"/>
+                            <constraint firstItem="Vl5-Su-r1t" firstAttribute="top" secondItem="fqK-CJ-KgL" secondAttribute="bottom" id="JIP-vd-qtF"/>
+                            <constraint firstItem="kUT-jP-Iut" firstAttribute="leading" secondItem="gQk-Mg-zG2" secondAttribute="leadingMargin" constant="10" id="NR2-DR-ytt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kUT-jP-Iut" secondAttribute="trailing" constant="10" id="erg-Ri-zjn"/>
+                            <constraint firstItem="Vl5-Su-r1t" firstAttribute="leading" secondItem="gQk-Mg-zG2" secondAttribute="leading" id="ju7-RG-yFw"/>
+                            <constraint firstAttribute="trailing" secondItem="Vl5-Su-r1t" secondAttribute="trailing" id="uMU-G7-LLS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="kUT-jP-Iut" id="P7j-Am-9aW"/>
+                        <outlet property="imageView" destination="Vl5-Su-r1t" id="wM3-tx-IaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwu-PG-IhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885.5999999999999" y="1007.9460269865068"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="hTn-I2-qx8">

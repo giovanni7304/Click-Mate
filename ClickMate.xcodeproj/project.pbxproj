@@ -19,6 +19,7 @@
 		866EBD1D1DA3317B00F94F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD1B1DA3317B00F94F50 /* LaunchScreen.storyboard */; };
 		866EBD251DA337FA00F94F50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 866EBD241DA337FA00F94F50 /* GoogleService-Info.plist */; };
 		869565C71DA5EDCA00208D89 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869565C61DA5EDCA00208D89 /* ClickViewController.swift */; };
+		86B16ACF1DA892EB0040FB05 /* ViewClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B16ACE1DA892EB0040FB05 /* ViewClickViewController.swift */; };
 		C78AD8FE24F0A09EA2A521D8 /* Pods_ClickMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCDA1219ED9A82D334AC779 /* Pods_ClickMate.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		866EBD1E1DA3317B00F94F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		866EBD241DA337FA00F94F50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		869565C61DA5EDCA00208D89 /* ClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
+		86B16ACE1DA892EB0040FB05 /* ViewClickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewClickViewController.swift; sourceTree = "<group>"; };
 		9BCDA1219ED9A82D334AC779 /* Pods_ClickMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69D0129640A53DB53805519 /* Pods-ClickMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClickMate/Pods-ClickMate.debug.xcconfig"; sourceTree = "<group>"; };
 		BD58B26360995E5D522A0C77 /* Pods-ClickMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickMate/Pods-ClickMate.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		861EB3711DA742D5000DE82C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				86B16ACE1DA892EB0040FB05 /* ViewClickViewController.swift */,
 				861EB3791DA745D4000DE82C /* SelectUserViewController.swift */,
 				861EB3771DA745CA000DE82C /* PictureViewController.swift */,
 				866EBD111DA3317B00F94F50 /* SignInViewController.swift */,
@@ -256,6 +259,7 @@
 				869565C71DA5EDCA00208D89 /* ClickViewController.swift in Sources */,
 				861EB3781DA745CA000DE82C /* PictureViewController.swift in Sources */,
 				866EBD181DA3317B00F94F50 /* ClickMate.xcdatamodeld in Sources */,
+				86B16ACF1DA892EB0040FB05 /* ViewClickViewController.swift in Sources */,
 				866EBD101DA3317B00F94F50 /* AppDelegate.swift in Sources */,
 				861EB37A1DA745D4000DE82C /* SelectUserViewController.swift in Sources */,
 			);
