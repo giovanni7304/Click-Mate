@@ -19,13 +19,14 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nextButton: UIButton!
 
     var imagePicker = UIImagePickerController()
+    var uuid = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
-        nextButton.isEnabled = true
+        nextButton.isEnabled = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -34,11 +35,14 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
         
+        nextButton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
     }
     @IBAction func cameraTapped(_ sender: AnyObject) {
-        
-        imagePicker.sourceType = .savedPhotosAlbum
+        // if testing on laptop then use photo album
+        //imagePicker.sourceType = .savedPhotosAlbum
+        // if on phone then use camera
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         
         present(imagePicker, animated: true, completion: nil)
@@ -52,7 +56,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imagesFolder = FIRStorage.storage().reference().child("images")
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.10)
         
-        imagesFolder.child("\(NSUUID().uuidString).jpg").put(imageData!, metadata: nil, completion: {(metadata, error) in
+        imagesFolder.child("\(uuid).jpg").put(imageData!, metadata: nil, completion: {(metadata, error) in
             
             print("We are trying to load the image now")
             if error != nil {
@@ -71,6 +75,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         nextVC.imageURL = sender as! String
         nextVC.descrip = descriptionTextField.text!
+        nextVC.uuid = uuid
         
     }
 }

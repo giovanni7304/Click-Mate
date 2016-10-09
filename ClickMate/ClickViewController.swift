@@ -35,14 +35,16 @@ class ClickViewController: UIViewController, UITableViewDataSource, UITableViewD
             if tempDict["from"] != nil {
                 //print("found: the from \(tempDict)")
                 click.from = tempDict["from"]!
-                click.uid  = snapshot.key
+                click.key  = snapshot.key
                 click.descrip = tempDict["description"]!
                 click.imageURL = tempDict["imageURL"]!
+                click.uuid = tempDict["uuid"]!
             } else {
                 click.from = "ERROR"
-                click.uid = "ERROR"
+                click.key = "ERROR"
                 click.descrip = "ERROR"
                 click.imageURL = "ERROR"
+                click.uuid = "ERROR"
             }
             
             //print("click: ",tempDict["from"]!)
@@ -50,10 +52,32 @@ class ClickViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.tableView.reloadData()
         
         })
+        
+        FIRDatabase.database().reference().child("clicks").child(FIRAuth.auth()!.currentUser!.uid).child("click").observe(FIRDataEventType.childRemoved, with: {(snapshot) in
+            //print("SnapShot: \(snapshot)")
+            
+           var index = 0
+            for click in self.clicks {
+                if click.key == snapshot.key {
+                    self.clicks.remove(at: index)
+                }
+                index += 1
+            }
+            self.tableView.reloadData()
+        })
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clicks.count
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if clicks.count == 0 {
+            return 1
+        } else {
+            return clicks.count
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,10 +92,14 @@ class ClickViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let cell = UITableViewCell()
         
-        let click = clicks[indexPath.row]
+        if clicks.count == 0 {
+            cell.textLabel!.text = "You have no Clicks 😞"
+        } else {
         
+            let click = clicks[indexPath.row]
+            cell.textLabel!.text = click.from
+        }
         //print("tableview: \(click.from)")
-        cell.textLabel!.text = click.from
         
         return cell
     }

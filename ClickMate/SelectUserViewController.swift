@@ -20,6 +20,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     
     var imageURL = ""
     var descrip = ""
+    var uuid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +69,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let user = users[indexPath.row]
-        
-        let click = ["from":user.email,"description":descrip,"imageURL":imageURL]
+        print("Current User email: \(FIRAuth.auth()!.currentUser!.email)!")
+        let click = ["from":(FIRAuth.auth()!.currentUser!.email)!,"description":descrip,"imageURL":imageURL, "uuid":uuid]
         
         FIRDatabase.database().reference().child("clicks").child(user.uid).child("click").childByAutoId().setValue(click)
         
